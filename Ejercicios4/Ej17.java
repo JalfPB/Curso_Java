@@ -1,5 +1,7 @@
 package Ejercicios4;
 
+import java.util.Scanner;
+
 public class Ej17 {
     // Determina si un número de tres cifras es un número Armstrong.
     // Un numero armstrong es aquel numero que al separar sus dígitos, elevarlos a
@@ -8,7 +10,11 @@ public class Ej17 {
     // elevados a la cuarta y luego sumarlos dan 8028.
 
     public static void main(String[] args) {
-        int num = 153, r, sum = 0, armstrong = 0, aux;
+        int num, r, sum = 0, armstrong = 0, aux;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce numero");
+        num = scanner.nextInt();
         aux = num;
 
         if (num < 100 || num > 999) {
@@ -19,7 +25,8 @@ public class Ej17 {
                 sum = (sum * 10) + r;
                 aux = aux / 10;
 
-                armstrong += Math.pow(r, 3);
+                armstrong += Math.pow(r, 3); // armstrong es la suma de los numero por la potencia
+                                             // De la cantidad de digitos del numero
 
                 // System.out.println(r);
             }

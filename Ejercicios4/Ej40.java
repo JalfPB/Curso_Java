@@ -6,6 +6,17 @@ public class Ej40 {
 
     //Solicita un valor y elimina la primera aparición de ese valor en un array.
 
+    public static void imprimirArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
         int[] lista = {1,2,3,4,5,6,7,8,9,10};
         Scanner scanner = new Scanner(System.in);
@@ -23,9 +34,7 @@ public class Ej40 {
             }
         }
 
-        for(int i = 0; i <lista.length; i++){
-            System.out.println(lista[i]);
-        }
+        imprimirArray(lista);
 
     }
 

@@ -1,5 +1,7 @@
 package Ejercicios4;
 
+import java.util.Scanner;
+
 public class Ej79 {
     // Implementa un método que reciba un número n y devuelva un array con las
     // potencias de 2 desde 20 hasta 2n.
@@ -26,8 +28,13 @@ public class Ej79 {
     }
 
     public static void main(String[] args) {
+        int n;
+        Scanner scanner = new Scanner(System.in);
 
-        imprimirArray(potencia2(5));
+        System.out.println("Introduce numero");
+        n = scanner.nextInt();
+
+        imprimirArray(potencia2(n));
         
     }
 

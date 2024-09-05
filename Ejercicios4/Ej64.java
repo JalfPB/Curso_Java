@@ -12,12 +12,11 @@ public class Ej64 {
         int n = 1, multiplicacion=1;
 
         do {
-            System.out.println("Introduce numero negativo ");
+            System.out.println("Introduce numero");
             n = scanner.nextInt();
-            if(n<02)
+            if(n%2!=0)
             multiplicacion = multiplicacion * n;
-        } while (n<0);
-
-        System.out.println("El producto es: " + multiplicacion);
+            System.out.println("El producto es: " + multiplicacion);
+        } while (n%2!=0);
     }
 }

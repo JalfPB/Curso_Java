@@ -21,6 +21,17 @@ public class Ej71 {
         return fibonacci;
     }
 
+    public static void imprimirArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
         int[] lista = new int[10];
 
@@ -28,9 +39,7 @@ public class Ej71 {
             lista[i] = fibonacci(i+2);
         }
 
-        for (int i = 0; i < lista.length; i++) {
-            System.out.println(lista[i]);
-        }
+        imprimirArray(lista);
 
     }
 

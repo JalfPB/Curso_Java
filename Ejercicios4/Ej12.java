@@ -8,8 +8,8 @@ public class Ej12 {
     static void calcularImpuestos(float ingresos, float umbral, float impuesto){
         float totalAPagar = 0;
         if(ingresos>umbral){
-            totalAPagar=ingresos*impuesto;
-        }
+            totalAPagar=ingresos*impuesto; // Los impuestos se aplican al total
+        }                                  // incluso por debajo del umbral
 
         System.out.println("El total de impuestos a pagar es de " + totalAPagar);
     }

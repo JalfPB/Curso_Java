@@ -4,6 +4,17 @@ import java.util.Scanner;
 
 public class Ej38 {
 
+    public static void imprimirArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
         //Invierte el orden de los elementos en un array.
         int[] lista = {1,2,3,4,5,6,7,8,9,10};
@@ -16,14 +27,11 @@ public class Ej38 {
             j = j - 1; 
         }
 
-        //Se mjuestra por pantalla
-        for(int i = 0; i <lista.length; i++){
-            System.out.println(lista[i]);
-        }
+        //Se mjuestra por pantalla el original
+        imprimirArray(lista);
 
-        for(int i = 0; i <lista.length; i++){
-            System.out.println(b[i]);
-        }
+        //Invertido
+        imprimirArray(b);
     }
 
 }

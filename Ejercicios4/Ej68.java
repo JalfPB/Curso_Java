@@ -5,6 +5,17 @@ import java.util.Scanner;
 public class Ej68 {
     // Pide al usuario llenar un array y sustituye los valores negativos por cero.
 
+    public static void imprimirArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
         int[] lista = new int[10];
         Scanner scanner = new Scanner(System.in);
@@ -20,9 +31,7 @@ public class Ej68 {
         }
 
         System.out.println("La lista sin negativos");
-        for(int i = 0; i < lista.length; i++){
-            System.out.println(lista[i]);
-        }
+        imprimirArray(lista);
         
     }
 
