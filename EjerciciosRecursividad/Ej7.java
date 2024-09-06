@@ -12,7 +12,7 @@ public class Ej7 {
 
         if (n > 0) {
             suma += n;
-            System.out.println(suma);
+            //System.out.println(suma);
             return sumaNaturales(n - 1);
         }
 
@@ -21,7 +21,7 @@ public class Ej7 {
     }
 
     public static void main(String[] args) {
-        sumaNaturales(3);
+        System.out.println(sumaNaturales(3));
     }
 
 }

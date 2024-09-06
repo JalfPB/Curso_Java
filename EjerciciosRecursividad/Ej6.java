@@ -6,10 +6,10 @@ public class Ej6 {
     static boolean ordenAlfabetico(String palabra){
         palabra = palabra.toLowerCase();
         if(palabra.length()>1){
-            if(palabra.charAt(0)<=palabra.charAt(1)){
-                return ordenAlfabetico(palabra.substring(1, palabra.length())); 
-            }else{
-                return false;
+            if(palabra.charAt(0)<=palabra.charAt(1)){ // Se comprueba si el caracter anterior es mayor 
+                return ordenAlfabetico(palabra.substring(1, palabra.length())); // Se hace una subcadena
+            }else{                                                                         // de la cadena original
+                return false;                                                              // y serepite el bucle
             }
         }else{
             return true;

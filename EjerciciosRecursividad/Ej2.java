@@ -8,8 +8,6 @@ public class Ej2 {
 
         if(exponente==0){
             return 1;
-        }else if(exponente<0){
-            return elevar(base,exponente+1) / base;
         }else{
             return base * elevar(base, exponente-1);
         }

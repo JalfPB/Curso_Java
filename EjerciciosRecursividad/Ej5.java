@@ -6,10 +6,10 @@ public class Ej5 {
 
     static void convertirBinario(int n) {
         if (n > 1) {
-            // Llamada recursiva dividiendo el número por 2
+            // Llamada recursiva dividiendo el numero por 2
             convertirBinario(n / 2);
         }
-        // Imprimir el resto de la división por 2
+        // Imprimir el resto de la division por 2
         System.out.print(n % 2);
     }
     
