@@ -6,41 +6,6 @@ public class Ej45 {
     private int finalCola;
     private int tamaño;
 
-    // Agregar un elemento al final de la cola
-    public void encolar(int elemento) {
-        if (tamaño == cola.length) {
-            System.out.println("La cola está llena");
-            return;
-        }
-        finalCola = (finalCola + 1) % cola.length;
-        cola[finalCola] = elemento;
-        tamaño++;
-    }
-
-    // Eliminar un elemento desde el frente de la cola
-    public int desencolar() {
-        if (tamaño == 0) {
-            System.out.println("La cola está vacía");
-            return -1; // Indicar que la cola está vacía
-        }
-        int elemento = cola[frente];
-        frente = (frente + 1) % cola.length;
-        tamaño--;
-        return elemento;
-    }
-
-    // Imprimir los elementos de la cola
-    public void imprimirCola() {
-        System.out.print("[");
-        for (int i = 0; i < tamaño; i++) {
-            System.out.print(cola[(frente + i) % cola.length]);
-            if (i < tamaño - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
-    }
-
     public static void main(String[] args) {
         int capacidad = 5;
         int[] cola = new int[capacidad];
