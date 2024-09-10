@@ -7,7 +7,7 @@ public class Ej45Nuevo {
             int primero = array[0]; // Guardar el primer elemento
             int segundo = array[1];
             int tercero = array[2];
-            int contador= 0;
+            int contador= 0,c = 0;
 
             // Desplazar todos los elementos una posición a la izquierda
             do{
@@ -18,9 +18,15 @@ public class Ej45Nuevo {
         }while(contador < array.length-1);
 
             // Colocar el primer elemento al final del array
-            array[array.length - 3] = primero;
-            array[array.length - 2] = segundo;
-            array[array.length - 1] = tercero;
+            //array[array.length - 3] = primero;
+            //array[array.length - 2] = segundo;
+            //array[array.length - 1] = tercero;
+
+            for(int i = array.length-1;i>0;i--){
+                array[i] = array[c];
+                c++;
+                System.out.println(array[c]);
+            }
         }
         return array;
     }
