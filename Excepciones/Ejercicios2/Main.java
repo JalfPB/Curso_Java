@@ -36,6 +36,15 @@ public class Main {
         return num;
     }
 
+    static int convertir2(String s) throws NumberFormatException {
+        try{
+            int num = Integer.parseInt(s);
+            return num;
+        }catch(Exception e){
+            throw new NumberFormatException("La cadena no se puede convertir a numero");
+        }
+    }
+
     static void validarCorreo(String correo) {
         if (!correo.contains("@"))
             throw new IllegalArgumentException("El formato del correo no es valido");
@@ -83,7 +92,8 @@ public class Main {
         // division(1, 0);
         // validar(5);
         // leerArchivo("sdjfhdsifsdjif");
-        // convertir("null");
+         //convertir("null");
+         convertir2("null");
         // validarCorreo("null@");
         // validarCorreo("null");
         // indiceArray(1);
@@ -91,8 +101,8 @@ public class Main {
         //inventario(1);
         //inventario(123);
         //contrasena("123");
-        raizCuadrada(2);
-        raizCuadrada(-2);
+        //raizCuadrada(2);
+        //raizCuadrada(-2);
     }
 
 }
