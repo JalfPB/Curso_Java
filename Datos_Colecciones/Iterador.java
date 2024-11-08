@@ -17,6 +17,29 @@ public class Iterador {
         while(it.hasNext()) {
             System.out.println(it.next());
         }
+
+        ArrayList<String> clientes = new ArrayList<>();
+        clientes.add("Pepe García");
+        clientes.add("Toni Pérez");
+        clientes.add("Marta Gomez");
+        clientes.add("Sara Martinez");
+
+        Iterator<String> clienteIterator = clientes.iterator();
+
+        /*for(String c : clientes) {
+            if(c.equals("Pepe García")){
+                clientes.remove(c);
+            }
+            System.out.println(c);
+        }// ConcurrentModificationException*/
+
+        while(clienteIterator.hasNext()){
+            String cliente = clienteIterator.next();
+            if(cliente.equals("Toni Pérez")){
+                clienteIterator.remove();
+            }
+            System.out.println(cliente);
+        }
     }
 
 }
