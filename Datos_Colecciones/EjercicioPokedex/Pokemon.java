@@ -88,4 +88,10 @@ public class Pokemon implements Comparable<Pokemon>{
         if( comparacion == 0 ) comparacion = this.nombre.compareTo(p.nombre);
         return comparacion;
     }
+
+    public void atacar(Pokemon p){
+        int danio = this.getAtaque()-p.getDefensa();
+        if( danio <= 0 ) danio = 1;
+        p.setPuntosVida(p.getPuntosVida()-danio);
+    }
 }

@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Pokedex {
+    // La estructura de los atributos es PS, Ataque, Defensa y velocidad
     Pokemon[] pokemons = {
         new Pokemon("Bulbasaur", 1, "Planta/Veneno", 45, 49, 49, 45),
         new Pokemon("Ivysaur", 2, "Planta/Veneno", 60, 62, 63, 60),
@@ -186,7 +187,7 @@ public class Pokedex {
     }
 
     public HashSet<String> obtenerTiposUnicos(){
-        
+
         for(Map.Entry<Integer,Pokemon> p : pokedex.entrySet()) {
             Integer key = p.getKey();
             Pokemon value = p.getValue();

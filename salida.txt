@@ -1,0 +1,4 @@
+Hola mundo!
+Escribiendo en un archivo usando PrintWriter.
+Este es un numero: 42
+Este es un decimal: 3,14
