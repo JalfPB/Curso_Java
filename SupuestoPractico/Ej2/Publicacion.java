@@ -38,6 +38,10 @@ public class Publicacion {
         }
     }
 
+    public void insertarComentario(Comentario comentario){
+        comentarios.add(comentario);
+    }
+
     public int getId() {
         return id;
     }
@@ -76,6 +80,12 @@ public class Publicacion {
 
     public void setComentarios(List<Comentario> comentarios) {
         this.comentarios = comentarios;
+    }
+
+    @Override
+    public String toString() {
+        return "Publicacion [id=" + id + ", contenido=" + contenido + ", autor=" + autor + ", fecha=" + fecha
+                + ", comentarios=" + comentarios + "]";
     }
 
 }

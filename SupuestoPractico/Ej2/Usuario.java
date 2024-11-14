@@ -32,12 +32,20 @@ public class Usuario {
     }
 
     public void eliminarAmigo(Usuario u) {
+        try{
         amigos.remove(u);
+        System.out.println("Amigo " + u.toString() + " eliminado con exito");
+        }catch(Exception e){
+            System.out.println("Ha courrido un error al eliminar el amigo: ");
+            e.printStackTrace();
+        }
     }
 
     public void mostrarAmigos() {
+        System.out.println("Lista de amigos del usuario " + nombre + ":");
         for (Usuario u : amigos) {
-            System.out.println(u.toString());
+            //System.out.println(u.toString());
+            System.out.println("Usuario: " + u.getNombre() + " email: " + u.getEmail());
         }
     }
 
@@ -118,7 +126,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario [nombre=" + nombre + ", email=" + email + ", amigos=" + amigos + "]";
+        return nombre + ", email: " + email;
     }
 
     public String getNombre() {

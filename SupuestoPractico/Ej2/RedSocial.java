@@ -15,6 +15,13 @@ public class RedSocial {
         return publicacion;
     }
 
+    public void crearComentario(int id, Comentario comentario){
+        for(Publicacion p : publicaciones){
+            if(p.getId()==id)
+                p.insertarComentario(comentario);
+        }
+    }
+
     public void eliminarPublicacion(int id){
         for(Publicacion p : publicaciones){
             if(p.getId() == id){
@@ -26,7 +33,8 @@ public class RedSocial {
 
     public void mostrarPublicaciones(){
         for(Publicacion p : publicaciones){
-            System.out.println(p.toString());
+            System.out.println("___PUBLICACION___");
+            p.mostrarPublicacion();
         }
     }
 
@@ -43,10 +51,15 @@ public class RedSocial {
         if (!pilaEliminados.isEmpty()) {
             Publicacion ultimoEliminado = pilaEliminados.pop();
             publicaciones.add(ultimoEliminado);
-            System.out.println("Se ha deshecho la eliminación del producto: " + ultimoEliminado);
+            System.out.println("Se ha deshecho la eliminacion del producto: " + ultimoEliminado);
         } else {
-            System.out.println("No hay productos para deshacer la eliminación.");
+            System.out.println("No hay productos para deshacer la eliminacion.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "RedSocial [publicaciones=" + publicaciones + ", pilaEliminados=" + pilaEliminados + "]";
     }
 
 }

@@ -22,7 +22,7 @@ public class Comentario {
     }
     @Override
     public String toString() {
-        return "Comentario [autor=" + autor + ", contenido=" + contenido + "]";
+        return "El Usuario " + autor.getNombre() + " comenta: " + contenido;
     }
 
 }
