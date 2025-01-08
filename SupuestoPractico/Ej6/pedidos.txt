@@ -1,0 +1,26 @@
+Estado: Recibido
+Fecha: 2024-11-15
+Prendas:
+Camisa,12.0,Sucia
+Pantalon,34.0,Sucia
+-----
+Estado: Recibido
+Fecha: 2024-11-15
+Prendas:
+Camisa,123.0,Sucia
+-----
+Estado: Recibido
+Fecha: 2024-11-15
+Prendas:
+Camisa,1.0,Sucia
+-----
+Estado: Recibido
+Fecha: 2024-11-15
+Prendas:
+Camisa,1.0,Sucia
+-----
+Estado: Recibido
+Fecha: 2024-11-15
+Prendas:
+Camisa,1.0,Sucia
+-----

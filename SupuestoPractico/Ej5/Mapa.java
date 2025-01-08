@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.LinkedList;
 
-class Ruta {
+class Ruta implements Serializable{
     private Territorio destino;
     private int distancia;
 
@@ -27,7 +27,7 @@ class Ruta {
     }
 }
 
-class Territorio {
+class Territorio implements Serializable{
     private String nombre;
     private List<Ruta> rutas;
 

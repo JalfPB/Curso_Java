@@ -46,4 +46,15 @@ public class Enemigo {
         this.defensa = defensa;
     }
 
+    public void morir(){
+        System.out.println(nombre + " ha sido derrotado.");
+    }
+
+    public void recibirDanio(int danio){
+        vida -= danio;
+        if(vida<=0)
+            vida = 0;
+            morir();
+    }
+
 }

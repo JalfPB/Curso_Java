@@ -26,6 +26,12 @@ public abstract class Personaje implements Serializable{
         this.dinero = dinero;
     }
 
+    public Personaje(String nombre, int nivel) {
+        this.nombre = nombre;
+        this.nivel = nivel;
+
+    }
+
     public String getNombre() {
         return nombre;
     }

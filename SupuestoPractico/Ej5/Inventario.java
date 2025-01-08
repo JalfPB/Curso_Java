@@ -1,11 +1,12 @@
 package SupuestoPractico.Ej5;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Inventario {
+public class Inventario implements Serializable{
 
     ArrayList<String> objetos = new ArrayList<>();
     Stack<String> pociones = new Stack<>();

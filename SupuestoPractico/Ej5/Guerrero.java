@@ -21,7 +21,7 @@ public class Guerrero extends Personaje{
         if(danio <= 0)
             danio = 1;
         
-        e.setVida(e.getVida()-danio);
+        e.recibirDanio(danio);
     }
 
     // Metodo especial del guerrero que sube su daño en un 15 %

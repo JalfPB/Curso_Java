@@ -10,36 +10,48 @@ public class Arquero extends Personaje{
     private int ataque;
     private int defensa;
     private Inventario inventario;
-    private int danioMagico = 30 + nivel;
     Random random = new Random();
     private int dinero;
 
     public Arquero(String nombre, int nivel, int vida, int ataque, int defensa, Inventario inventario, int dinero){
         super(nombre, nivel, vida, ataque, defensa, inventario, dinero);
 
+        //TODO
+        this.nombre = nombre;
+        this.nivel = nivel;
+        this.vida = vida;
+
+    }
+
+    public Arquero(String nombre, int nivel){
+        super(nombre, nivel);
+        this.vida = nivel * 10;
+        this.ataque = nivel * 10;
+        this.defensa = nivel * 10;
+        this.inventario = new Inventario();
+        this.dinero = 0;
     }
 
     // El arquero tiene probabilidad de hacer daño critico al atacar
     @Override
     public void atacar(Enemigo e) {
         int probCritico = random.nextInt(100);
-        int danioCritico;
         int danio;
-        if (probCritico >= 50){
-            danioCritico = ataque * 3;
-            danio = danioCritico + ataque - e.getDefensa();
-        }else{
-            danio = ataque-e.getDefensa();
-            if(danio <= 0)
-                danio = 1;
-        }
-    
-        e.setVida(e.getVida()-danio);
-    }
 
-    // Metodo especial del Arquero que sube su daño en un 15 %
-    public void aplicarDanioMagico(){
-        ataque = ataque + danioMagico;
+        if (probCritico >= 50) {
+            // Calculo de daño crítico
+            danio = ataque * 3 - e.getDefensa();
+            if (danio <= 0) danio = 1;  // Asegura que el daño sea al menos 1
+            System.out.println("¡Daño crítico realizado! Daño total: " + danio);
+            System.out.println("DAÑO DEL ARQUERO " + ataque);
+        } else {
+            // Calculo de daño normal
+            danio = ataque - e.getDefensa();
+            if (danio <= 0) danio = 1;
+            System.out.println("Daño normal realizado: " + danio);
+        }
+
+        e.recibirDanio(danio);
     }
 
     @Override

@@ -1,0 +1,3 @@
+Salvar al pueblo de los bandidos|1|Oro y experiencia
+Derrotar al dragón en la montaña|5|Escamas del Dragón y mucho oro
+Recoger hierbas en el bosque|1|Poción curativa
